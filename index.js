@@ -1,13 +1,9 @@
+//INICIO DESFAIO SIMULADOR INTERACTIVO
+
+//Bienvenida Y pedida de usuario y contraseña
+alert('Bienvenido! \nIngresa tu Usuario y Contraseña ')
+let Usuario = prompt('Usuario')
+let Contraseña = prompt('Contraseña ')
 
 
-let palabraRep = prompt('Ingresa tu palabra')
-let repeticionNum = parseInt(prompt('Ingresa el numero de veces que quieres repetir la palabra'))
-
-
-
-for(let iteracion = 0;iteracion<=repeticionNum;iteracion++){
-        alert('tu palabra  ' + palabraRep + '  numero  ' +iteracion)
-
-         console.log('iteracion numero: '+iteracion)
-    }
 
