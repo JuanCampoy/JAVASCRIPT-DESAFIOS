@@ -5,7 +5,6 @@ let Carrito=0;
 var SegComp = false
 
 
-
 //Bienvenida Y pedida de usuario y contraseña
 
 alert('Bienvenido a Entorno Agicola! \n \n Ingresa tu Usuario y Contraseña ')
