@@ -1,3 +1,4 @@
+
 //INICIO DESFAIO SIMULADOR INTERACTIVO
 let CostoServicio= 0;
 let Carrito=0;
@@ -5,12 +6,39 @@ let Carrito=0;
 var SegComp = false
 
 
+
 //Bienvenida Y pedida de usuario y contraseña
 
-alert('Bienvenido a Entorno Agicola! \n \n Ingresa tu Usuario y Contraseña ')
+alert('Bienvenido a Entorno Agicola! ')
 
-let Usuario = prompt('Usuario')
-let Contraseña = prompt('Contraseña ')
+
+
+alert('Hemos detectado que no cuenta con una sesion registrada con nosotros \n \n Ayudanos completando el siguiente formulario ')
+
+
+class usuario {
+    constructor(nombre, pais,edad,contraseña) {
+        this.nombre  = nombre.toUpperCase();
+        this.contraseña = contraseña
+        this.pais = pais
+        this.edad = edad
+       
+    }
+
+   
+}
+
+
+//Declaramos un array de productos para almacenar objetos
+const listaUsers = [];
+
+listaUsers.push(new usuario(prompt ("Usuario"), prompt ("Pais"),prompt ("Edad"),prompt ("Contraseña"),));
+
+console.log(listaUsers)
+
+alert('Registro exitoso!' )
+
+
 
 comprar();
 
@@ -137,3 +165,9 @@ if(Servicio === '4'){
                 }
         
     }
+
+
+
+
+
+
