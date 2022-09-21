@@ -1,5 +1,5 @@
 let servicios = []
-let carrito = []
+
 
 class Servicio{
     constructor(id, nombre, precio, img, descrip ){
@@ -11,17 +11,28 @@ class Servicio{
     }
 
     desplegarTarjeta(){
-
+         
+     
         const card = `
         <div class="tarjeta-servicio rounded-3" > 
             <h3>${this.nombre}</h3>
             <p>${this.descrip}</p>
             <img src="${this.img}" alt="imagen Suscripcion Anual">
-            <a href="" class="btn btn-outline-success botonCompra" id= ${this.id}>Comprar</a>
+            <button id=${this.id} class='btn btn-outline-success botonCompra'>Comprar</button>
+            
+            
       </div>
         `
         const container = document.getElementById('tarjetaServ')
         container.innerHTML += card
+    }
+
+    aumentarCarrito(){
+        const botonServ = document.getElementById(this.id)
+        console.log(botonServ)
+        botonServ.addEventListener("click", () => aumentarCarrito())
+
+        
     }
 
 }
@@ -38,5 +49,20 @@ servicios.forEach(e => {
     e.desplegarTarjeta()
 }) 
 
+servicios.forEach(e => {
+    e.aumentarCarrito()
+})
+
+function aumentarCarrito() {
+
+    let cantidadCarrito = 0
+
+    cantidadCarrito += 1;
+
+    document.getElementById("carrito").innerHTML = "Carrito =" + cantidadCarrito;
+
+
+    console.log(cantidadCarrito)
+}
 
 
