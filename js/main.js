@@ -1,4 +1,5 @@
 let servicios = []
+let cantidadCarrito = 0
 
 
 class Servicio{
@@ -55,14 +56,17 @@ servicios.forEach(e => {
 
 function aumentarCarrito() {
 
-    let cantidadCarrito = 0
-
+    
     cantidadCarrito += 1;
 
-    document.getElementById("carrito").innerHTML = "Carrito =" + cantidadCarrito;
+    const cantidadCarritoJSON = JSON.stringify(cantidadCarrito)
+
+  localStorage.setItem('CarritoCantidad' ,cantidadCarritoJSON)  
+
+    document.getElementById("carrito").innerHTML = "Carrito =" + cantidadCarritoJSON;
 
 
-    console.log(cantidadCarrito)
+    console.log(cantidadCarritoJSON)
 }
 
 
